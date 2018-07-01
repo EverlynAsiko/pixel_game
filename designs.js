@@ -3,9 +3,7 @@ let color =  $('#colorPicker');
 
 // Choose grid size form event that creates the grid
 $('#sizePicker').submit(function(e){
-    //Removes the previous grid so that other grid selections are not appended to it
-    $('tr').remove();
-
+    
     //Call the makeGrid() function
     makeGrid();
     e.preventDefault();
@@ -29,6 +27,9 @@ function makeGrid(){
 
     //Selects the table dom element
     const tableSize = $('#pixelCanvas');
+	
+	//Removes the previous grid so that other grid selections are not appended to it
+    $('tr').remove();
 
 	//Loops through adding rows to the table
     for (let x = 1; x <= height; x++){
